@@ -15,7 +15,7 @@ let TopHit // Makes the ball hitting the top sound global
 
 function preload(){
   background = createImg('resources/background.png',''); // Defines the picture for the background
-  background.hide(); // Hides the background picture
+	background.hide(); // Hides the background picture
   ball = createImg('resources/ball.png',''); // Defines the picture for the ball
   ball.hide(); // Hides the ball picture
   PlayerHit = createAudio('resources/HitPlayer.mp3',''); // Defines the audio for Player Hit
