@@ -14,15 +14,15 @@ let SideHit // Makes the ball hitting the border sound global
 let TopHit // Makes the ball hitting the top sound global
 
 function preload(){
-  background = createImg('/resources/background.png',''); // Defines the picture for the background
+  background = createImg('resources/background.png',''); // Defines the picture for the background
 	background.hide(); // Hides the background picture
-  ball = createImg('/resources/ball.png',''); // Defines the picture for the ball
+  ball = createImg('resources/ball.png',''); // Defines the picture for the ball
   ball.hide(); // Hides the ball picture
-  PlayerHit = createAudio('/resources/HitPlayer.mp3',''); // Defines the audio for Player Hit
+  PlayerHit = createAudio('resources/HitPlayer.mp3',''); // Defines the audio for Player Hit
   PlayerHit.hide(); // Hides the player hit sound
-  SideHit = createAudio('/resources/HitSide.mp3',''); // Defines the audio for Side Hit
+  SideHit = createAudio('resources/HitSide.mp3',''); // Defines the audio for Side Hit
   SideHit.hide(); // Hides the side hit sound
-  TopHit = createAudio('/resources/HitTop.mp3','') // Defines the audio for Top Hit
+  TopHit = createAudio('resources/HitTop.mp3','') // Defines the audio for Top Hit
   TopHit.hide(); // Hides the top hit sound
 }
 
