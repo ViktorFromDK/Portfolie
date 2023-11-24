@@ -6,19 +6,21 @@
 body {                      
   font-family: Arial;       /* sætter font */
   padding: 10px;            /* margen omkring tekst */
-  background: rgb(20,90,120);    /* farven */
+  background: rgb(66, 126, 146);    /* farven */
 }
 
                             /* Header/Blog Title */
 .header {                   /* . betyder det er en class */
   padding: 30px;
   text-align: center;
-  background: rgb(80,160,200);
+  background: rgb(20,90,120);
+  color: white;
 }
 
                             /* sætter h1 i header klassen til fontsize 50px*/
 .header h1 {
   font-size: 50px;
+  color: white;
 }
 
 /* Style the top navigation bar */
@@ -47,21 +49,22 @@ body {
 /* Left column */
 .leftcolumn {
   float: left;
+  color: white;
   width: 75%;
 }
 
 /* Right column */
 .rightcolumn {
+  color: white;
   float: left;
   width: 25%;
   padding-left: 20px;
 }
 
-
-
 /* Add a card effect for articles */
 .card {
-  background-color: rgb(200,230,240);
+  background-color: rgb(80,160,200);
+  color: white;
   padding: 20px;
   margin-top: 20px;
 }
@@ -79,6 +82,7 @@ body {
 .footer {
   padding: 20px;
   text-align: left;
+  color: white;
   background: rgb(80,160,200);
   margin-top: 20px;
 }
