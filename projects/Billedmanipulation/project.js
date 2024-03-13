@@ -84,15 +84,17 @@ function contrastfilter() {
 function ownFilter() {
   for (let i = 0; i < w; i = i+1) {
     for (let j = 0; j < h; j = j+1){
-      fill(getRGBvalue(0,i,j),getRGBvalue(1,i,j),getRGBvalue(2,i,j));
-      rect(i+(windowWidth/2-w), j+(windowHeight/3.7), 1, 1);
+      fill(getRGBvalue(0,i,j),getRGBvalue(1,i,j),getRGBvalue(2,i,j)); // Sætter farven til farven defineret i getRGBvalue
+      rect(i+(windowWidth/2-w), j+(windowHeight/3.7), 1, 1); // Laver rect for hver pixel
     }
   }
 }
 
 function getRGBvalue(n,i,j){
   c = getPixelValue(n,i,j);
-  if (c>A){c=255;}
+  if (c>A){
+    c=255;
+  }
   else{c=0;}
   return c;
 }
