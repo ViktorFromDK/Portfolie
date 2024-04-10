@@ -32,7 +32,6 @@ body {
 /* Style the topnav links */
 .topnav a {
   float: right;
-  display: inline-block; /* linkene fylder hele linjen*/
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -59,13 +58,7 @@ body {
 }
 
 /* Change color on hover */
-.topnav a:hover {
-  background-color: rgb(200,230,240);
-  color: black;
-}
-
-/* Change color on hover */
-.dropdown:hover .dropbtn {
+.topnav a:hover, .dropdown:hover .dropbtn {
   background-color: rgb(200,230,240);
   color: black;
 }
