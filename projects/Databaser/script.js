@@ -41,7 +41,7 @@ function hasLearned(){
     document.getElementById('choose').innerHTML = listWithLearned; // Returnere information til HTML og "variablen" "valg"
     show = 1
   } else {
-    document.getElementById('choose').innerHTML = null; // Returnere information til HTML og "variablen" "valg"
+    document.getElementById('choose').innerHTML = ""; // Returnere information til HTML og "variablen" "valg"
     show = 0
   }
 }
