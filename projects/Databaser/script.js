@@ -5,6 +5,7 @@ let data;
 var theme = null // Sætter variablen til ingenting
 var explanation = "Korrekt svar:" // Sætter variablen til ingenting
 var image = null // Sætter variablen til ingenting
+let show = 0;
 
 function next() {
   var pic;
@@ -36,7 +37,13 @@ function reveal(){
 }
 
 function hasLearned(){
-  document.getElementById('choose').innerHTML = listWithLearned; // Returnere information til HTML og "variablen" "valg"
+  if (show == 0) {
+    document.getElementById('choose').innerHTML = listWithLearned; // Returnere information til HTML og "variablen" "valg"
+    show = 1
+  } else {
+    document.getElementById('choose').innerHTML = null; // Returnere information til HTML og "variablen" "valg"
+    show = 0
+  }
 }
 
 function findText(x){
