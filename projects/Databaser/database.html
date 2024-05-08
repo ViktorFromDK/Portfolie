@@ -61,11 +61,12 @@
     <div class="content">
           <h1>Flashcards læring</h1>
           <h2 id="theme"></h2> <!-- Opretter "overskrift" som en "variabel" -->
-          <img id="question" src="https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/samlet.jpg?raw=true" style="width: 50%;"> <!-- Opretter "myImage" som en "variabel" samt sætter det fulde billede som placeholder -->
+<!--          <img id="question" src="https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/samlet.jpg?raw=true" style="width: 50%;"> --> <!-- Opretter "myImage" som en "variabel" samt sætter det fulde billede som placeholder -->
+          <p id="question"></p> <!-- Opretter en "question" som "variabel" -->
           <p id="explanation"></p> <!-- Opretter en "beskrivelse" som "variabel" -->
-          <p id="progression"></p> <!-- Opretter "progression" som en "variabel" -->
-          <button type="button" class="button" onclick="next()">Næste</button> <!-- Kalder JS funktionen "ny()" -->
-          <button type="button" class="button" onclick="learned()">Marker som lært</button> <!-- Kalder JS funktionen "valgte()" -->
+          <button type="button" class="button" onclick="reveal()">Vis korrekt svar</button> <!-- Kalder JS funktionen "reveal()" -->
+          <button type="button" class="button" onclick="next()">Næste</button> <!-- Kalder JS funktionen "next()" -->
+          <button type="button" class="button" onclick="learned()">Marker som lært</button> <!-- Kalder JS funktionen "learned()" -->
           <br>
           <br>
           <p id="choose"></p> <!-- Opretter "valg" som en "variabel" -->
