@@ -19,12 +19,11 @@ function next() {
 
 function learned() {
   listLearnedNumber.push(x)
-  listWithLearned.push(image) // Tilføjer overskriften som det sidste i listen med variable
-  document.getElementById('choose').innerHTML = listWithLearned; // Returnere information til HTML og "variablen" "valg"
+  listWithLearned.push(" "+image) // Tilføjer overskriften som det sidste i listen med variable
 }
 
 function FindNew() {
-  y = Math.floor(Math.random()*8+1); // Vælger tilfældig mellem 1 og 5. Math.random vælger mellem 0 og 1 og derfor ganges med antallet af muligheder og ligger en til for at starte ved 1. Math.floor runder ned til nærmeste hele tal.
+  y = Math.floor(Math.random()*26+1); // Vælger tilfældig mellem 1 og 5. Math.random vælger mellem 0 og 1 og derfor ganges med antallet af muligheder og ligger en til for at starte ved 1. Math.floor runder ned til nærmeste hele tal.
   if (listLearnedNumber.includes(y)) {
     FindNew()
   } else {
@@ -34,6 +33,10 @@ function FindNew() {
 
 function reveal(){
   document.getElementById('explanation').innerHTML = "Korrekt svar: "+beskrivelse; // Returnere information til HTML og "variablen" "beskrivelse"
+}
+
+function hasLearned(){
+  document.getElementById('choose').innerHTML = listWithLearned; // Returnere information til HTML og "variablen" "valg"
 }
 
 function findText(x){
