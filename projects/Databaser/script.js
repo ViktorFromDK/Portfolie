@@ -46,6 +46,7 @@ function hasLearned(){
   } else {
     show = 0
     document.getElementById('choose').innerHTML = "Lærte begreber:"; // Returnere information til HTML og "variablen" "valg"
+  }
 }
 
 function findText(x){
