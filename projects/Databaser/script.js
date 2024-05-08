@@ -20,7 +20,7 @@ function next() {
 function learned() {
   listLearnedNumber.push(x)
   listWithLearned.push(" "+image) // Tilføjer overskriften som det sidste i listen med variable
-  document.getElementById('choose').innerHTML = "Lærte begreber: " + listWithLearned; // Returnere information til HTML og "variablen" "valg"
+  document.getElementById('choose').innerHTML = "Lærte begreber: "+listWithLearned; // Returnere information til HTML og "variablen" "valg"
 }
 
 function FindNew() {
