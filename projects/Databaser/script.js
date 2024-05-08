@@ -22,7 +22,9 @@ function learned() {
   listLearnedNumber.push(x)
   listWithLearned.push(" "+image) // Tilføjer overskriften som det sidste i listen med variable
   if (show == 1) {
-    document.getElementById('choose').innerHTML = listWithLearned; // Returnere information til HTML og "variablen" "valg"
+    document.getElementById('choose').innerHTML = "Lærte begreber: "+listWithLearned; // Returnere information til HTML og "variablen" "valg"
+  } else if (show == 0) {
+    document.getElementById('choose').innerHTML = "Lærte begreber:"; // Returnere information til HTML og "variablen" "valg"
   }
 }
 
@@ -43,7 +45,7 @@ function hasLearned(){
   if (show == 0) {
     document.getElementById('choose').innerHTML = "Lærte begreber: " + listWithLearned; // Returnere information til HTML og "variablen" "valg"
     show = 1
-  } else {
+  } else if (show == 1) {
     show = 0
     document.getElementById('choose').innerHTML = "Lærte begreber:"; // Returnere information til HTML og "variablen" "valg"
   }
