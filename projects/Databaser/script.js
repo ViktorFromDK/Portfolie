@@ -40,8 +40,12 @@ function reveal(){
 }
 
 function hasLearned(){
-  document.getElementById('choose').innerHTML = listWithLearned; // Returnere information til HTML og "variablen" "valg"
-  show = 1
+  if (show == 0) {
+    document.getElementById('choose').innerHTML = "Lærte begreber: " + listWithLearned; // Returnere information til HTML og "variablen" "valg"
+    show = 1
+  } else {
+    show = 0
+    document.getElementById('choose').innerHTML = "Lærte begreber:"; // Returnere information til HTML og "variablen" "valg"
 }
 
 function findText(x){
