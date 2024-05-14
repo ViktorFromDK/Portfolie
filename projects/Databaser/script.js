@@ -5,22 +5,33 @@ let data;
 var theme = null // Sætter variablen til ingenting
 var explanation = "Korrekt svar:" // Sætter variablen til ingenting
 var image = null // Sætter variablen til ingenting
+let trigger = 1;
 
 function next() {
-  var pic;
-  FindNew()
-  findText(x); // Kalder funktionen "genererTekst" med x som værdi
-  pic = "https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/FN"+image+".jpg?raw=true" // Vælger billede baseret på x
-  document.getElementById('theme').innerHTML = overskrift; // Returnere information til HTML og "variablen" "overskrift"
+  if (trigger == 1) {
+    var pic;
+    FindNew()
+    findText(x); // Kalder funktionen "genererTekst" med x som værdi
+    pic = "https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/FN"+image+".jpg?raw=true" // Vælger billede baseret på x
+    document.getElementById('theme').innerHTML = overskrift; // Returnere information til HTML og "variablen" "overskrift"
 //  document.getElementById('question').src = pic; // Returnere information til HTML og "variablen" "myImage"
-  document.getElementById('question').innerHTML = "Forklar "+image;
-  document.getElementById('explanation').innerHTML = "Korrekt svar:";
+    document.getElementById('question').innerHTML = "Forklar "+image;
+    document.getElementById('explanation').innerHTML = "Korrekt svar:";
+    trigger = 0
+  } else {
+    document.getElementById('explanation').innerHTML = "Korrekt svar: TRYK VIS SVAR FØRST";
+  }
 }
 
 function learned() {
-  listLearnedNumber.push(x)
-  listWithLearned.push(" "+image) // Tilføjer overskriften som det sidste i listen med variable
-  document.getElementById('choose').innerHTML = "Lærte begreber: "+listWithLearned; // Returnere information til HTML og "variablen" "valg"
+  if (trigger == 1) {
+    listLearnedNumber.push(x)
+    listWithLearned.push(" "+image) // Tilføjer overskriften som det sidste i listen med variable
+    document.getElementById('choose').innerHTML = "Lærte begreber: "+listWithLearned; // Returnere information til HTML og "variablen" "valg"
+    next()
+  } else {
+    document.getElementById('explanation').innerHTML = "Korrekt svar: TRYK VIS SVAR FØRST";
+  }
 }
 
 function FindNew() {
@@ -34,6 +45,7 @@ function FindNew() {
 
 function reveal(){
   document.getElementById('explanation').innerHTML = "Korrekt svar: "+beskrivelse; // Returnere information til HTML og "variablen" "beskrivelse"
+  trigger = 1
 }
 
 function findText(x){
