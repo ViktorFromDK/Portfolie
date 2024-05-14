@@ -1,51 +1,48 @@
 let x;
-let listWithLearned = []; // Laver variablen "listeMedValgte" til en liste. Markeret med []
-let listLearnedNumber = [];
+let listWithLearned = []; // Laver variablen "listWithLearned" til en liste. Markeret med []
+let listLearnedNumber = []; // Laver variablen "listLearnedNumber" til en liste. Markeret med []
 let data;
 var theme = null // Sætter variablen til ingenting
 var explanation = "Korrekt svar:" // Sætter variablen til ingenting
 var image = null // Sætter variablen til ingenting
-let trigger = 1;
+let trigger = 1; // Tjekker om svaret er vist
 
 function next() {
-  if (trigger == 1) {
-    var pic;
-    FindNew()
+  if (trigger == 1) { // Tjekker om svaret er blevet vist
+    FindNew() // Finder nyt spørgsmål
     findText(x); // Kalder funktionen "genererTekst" med x som værdi
-    pic = "https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/FN"+image+".jpg?raw=true" // Vælger billede baseret på x
-    document.getElementById('theme').innerHTML = overskrift; // Returnere information til HTML og "variablen" "overskrift"
-//  document.getElementById('question').src = pic; // Returnere information til HTML og "variablen" "myImage"
-    document.getElementById('question').innerHTML = "Forklar "+image;
-    document.getElementById('explanation').innerHTML = "Korrekt svar:";
-    trigger = 0
+    document.getElementById('theme').innerHTML = overskrift; // Returnere information til HTML og "variablen" "theme"
+    document.getElementById('question').innerHTML = "Forklar "+image; // Retunerere information til HTML og "variablen" "question"
+    document.getElementById('explanation').innerHTML = "Korrekt svar:"; // Retunere information til HTML og "variablen" "explanation"
+    trigger = 0 // Sætter at svaret ikke er vist for den nye
   } else {
-    document.getElementById('explanation').innerHTML = "Korrekt svar: TRYK VIS SVAR FØRST";
+    document.getElementById('explanation').innerHTML = "Korrekt svar: TRYK VIS SVAR FØRST"; // Informere brugeren om at man skal vise svaret før man kan gå videre
   }
 }
 
 function learned() {
-  if (trigger == 1) {
-    listLearnedNumber.push(x)
-    listWithLearned.push(" "+image) // Tilføjer overskriften som det sidste i listen med variable
-    document.getElementById('choose').innerHTML = "Lærte begreber: "+listWithLearned; // Returnere information til HTML og "variablen" "valg"
-    next()
+  if (trigger == 1) { // Tjekker om svaret er blevet vist
+    listLearnedNumber.push(x) // Tilføjer variablen x's værdi til variabellisten "listWithLearned"
+    listWithLearned.push(" "+image) // Tilføjer overskriften til variabellisten "listLearnedNumber"
+    document.getElementById('choose').innerHTML = "Lærte begreber: "+listWithLearned; // Returnere information til HTML og "variablen" "choose"
+    next() // Trigger valg af næste spørgsmål
   } else {
-    document.getElementById('explanation').innerHTML = "Korrekt svar: TRYK VIS SVAR FØRST";
+    document.getElementById('explanation').innerHTML = "Korrekt svar: TRYK VIS SVAR FØRST"; // Informere brugeren om at man skal vise svaret før man kan gå videre
   }
 }
 
 function FindNew() {
   y = Math.floor(Math.random()*26+1); // Vælger tilfældig mellem 1 og 5. Math.random vælger mellem 0 og 1 og derfor ganges med antallet af muligheder og ligger en til for at starte ved 1. Math.floor runder ned til nærmeste hele tal.
-  if (listLearnedNumber.includes(y)) {
-    FindNew()
+  if (listLearnedNumber.includes(y)) { // Tjekker om y's værdi er i listen "listLearnedNumber"
+    FindNew() // Hvis y er i listen så starter den sig selv forfra
   } else {
-    x = y
+    x = y // Hvis y ikke er i listen sætter den x's værdi til at være y's værdi
   }
 }
 
 function reveal(){
   document.getElementById('explanation').innerHTML = "Korrekt svar: "+beskrivelse; // Returnere information til HTML og "variablen" "beskrivelse"
-  trigger = 1
+  trigger = 1 // Sætter at svaret er blevet vist
 }
 
 function findText(x){
