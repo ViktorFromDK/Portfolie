@@ -1,7 +1,7 @@
 // Classifier Variable
 let classifier;
 // Model URL
-let imageModelURL = './';
+let imageModelURL = '/Portfolie/assets/machinelearning/produkt/';
 
 // Video
 let video;
@@ -15,7 +15,7 @@ let track
 
 // Load the model first
 function preload() {
-  classifier = ml5.imageClassifier('/Portfolie/assets/machinelearning/produkt/model.json');
+  classifier = ml5.imageClassifier(imageModelURL + 'model.json');
 }
 
 function setup() {
