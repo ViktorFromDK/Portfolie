@@ -27,7 +27,7 @@ body {
 .topnav {
   overflow: hidden; /* tekst bliver ikke vist hvis det går ud over kanten*/
   background-color: rgb(0,0,0);
-  border-bottom-right-radius: 6px;
+  border-radius: 0px 0px 6px 6px;
 }
 
 /* Style the topnav links */
