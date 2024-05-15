@@ -9,7 +9,7 @@ let wh;
 let scene;
 
 function preload() {
-  img = loadImage('billeder/mpsFull.jpg');
+  img = loadImage('/Portfolie/assets/billedemanipulation/produkt/mpsfull.jpg');
 }
 
 function setup() {

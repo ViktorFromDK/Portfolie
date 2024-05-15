@@ -14,15 +14,15 @@ let SideHit // Makes the ball hitting the border sound global
 let TopHit // Makes the ball hitting the top sound global
 
 function preload(){
-  background = createImg('Resources/Background.png',''); // Defines the picture for the background
+  background = createImg('/Portfolie/assets/spillegogsamarbejde/produkt/background.png',''); // Defines the picture for the background
 	background.hide(); // Hides the background picture
-  ball = createImg('Resources/Ball.png',''); // Defines the picture for the ball
+  ball = createImg('/Portfolie/assets/spillegogsamarbejde/produkt/ball.png',''); // Defines the picture for the ball
   ball.hide(); // Hides the ball picture
-  PlayerHit = createAudio('Resources/HitPlayer.mp3',''); // Defines the audio for Player Hit
+  PlayerHit = createAudio('/Portfolie/assets/spillegogsamarbejde/produkt/hitplayer.mp3',''); // Defines the audio for Player Hit
   PlayerHit.hide(); // Hides the player hit sound
-  SideHit = createAudio('Resources/HitSide.mp3',''); // Defines the audio for Side Hit
+  SideHit = createAudio('/Portfolie/assets/spillegogsamarbejde/produkt/hitside.mp3',''); // Defines the audio for Side Hit
   SideHit.hide(); // Hides the side hit sound
-  TopHit = createAudio('Resources/HitTop.mp3','') // Defines the audio for Top Hit
+  TopHit = createAudio('/Portfolie/assets/spillegogsamarbejde/produkt/hittop.mp3','') // Defines the audio for Top Hit
   TopHit.hide(); // Hides the top hit sound
 }
 

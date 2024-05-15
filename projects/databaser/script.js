@@ -59,7 +59,7 @@ function findText(x){
 
 window.onload = function() {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "flashcards.csv", true); // Vælger data filen
+  xhr.open("GET", "/Portfolie/assets/databaser/produkt/flashcards.csv", true); // Vælger data filen
   xhr.responseType = "text";
   xhr.onload = function() {
     data = Papa.parse(xhr.responseText, { // Bruger tidligere indlæst bibliotek

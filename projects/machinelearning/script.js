@@ -15,7 +15,7 @@ let track
 
 // Load the model first
 function preload() {
-  classifier = ml5.imageClassifier(imageModelURL + 'model.json');
+  classifier = ml5.imageClassifier(imageModelURL + '/Portfolie/assets/machinelearning/produkt/model.json');
 }
 
 function setup() {
@@ -25,10 +25,10 @@ function setup() {
   video.size(320, 240);
   video.hide();
 
-  track = createImg('racetrack.jpg','')
+  track = createImg('/Portfolie/assets/machinelearning/produkt/racetrack.jpg','')
   track.hide()
 
-  bil = createImg('bil.png','');
+  bil = createImg('/Portfolie/assets/machinelearning/produkt/bil.png','');
   bil.hide()
 
   flippedVideo = ml5.flipImage(video);
