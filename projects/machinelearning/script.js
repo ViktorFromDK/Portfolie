@@ -15,7 +15,7 @@ let track
 
 // Load the model first
 function preload() {
-  classifier = ml5.imageClassifier(imageModelURL + '/Portfolie/assets/machinelearning/produkt/model.json');
+  classifier = ml5.imageClassifier('/Portfolie/assets/machinelearning/produkt/model.json');
 }
 
 function setup() {
